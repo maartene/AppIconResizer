@@ -44,4 +44,4 @@ Example:
 # Contact details
 * email: maarten@thedreamweb.eu
 * twitter: @maarten_engels
-* GitHub: https://github.com/maartene/AppIconResizer
+* GitHub: https://github.com/maartene/AppIconResizer.git
