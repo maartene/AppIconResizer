@@ -87,6 +87,10 @@ struct ResizerCLI {
     }
 
     private func processImages() throws {
+        if inputFile == "" {
+            return
+        }
+        
         guard let dataProvider = CGDataProvider(filename: inputFile) else {
             throw AppIconResizerError.loadFailure("Could not load data")
         }

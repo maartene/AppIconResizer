@@ -1,7 +1,7 @@
 import XCTest
 import class Foundation.Bundle
 
-final class AppIcon_ResizerTests: XCTestCase {
+final class AppIconResizerTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
@@ -12,10 +12,11 @@ final class AppIcon_ResizerTests: XCTestCase {
             return
         }
 
-        let fooBinary = productsDirectory.appendingPathComponent("AppIcon Resizer")
+        let fooBinary = productsDirectory.appendingPathComponent("AppIconResizer")
 
         let process = Process()
         process.executableURL = fooBinary
+        process.arguments = ["-v"]
 
         let pipe = Pipe()
         process.standardOutput = pipe
@@ -26,7 +27,7 @@ final class AppIcon_ResizerTests: XCTestCase {
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let output = String(data: data, encoding: .utf8)
 
-        XCTAssertEqual(output, "Hello, world!\n")
+        XCTAssertEqual(output, "AppIcon Resizer version 0.0.1\n")
     }
 
     /// Returns path to the built products directory.
