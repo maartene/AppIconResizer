@@ -39,7 +39,8 @@ Example:
 * `-h             ` : show help
 
 # Known issues
-* Some files crash the application when you try to resize them with the following message: `Illegal instruction: 4`. This might be the case if the file to convert is not large enough. But this requires further investigation.
+* Some files crash the application when you try to resize them with the following message: `Illegal instruction: 4`. This might be the case if the file to convert is not large enough. But this requires further investigation;
+* Only iOS build app icon sizes are now available. I'll add tvOS, watchOS and macOS at a later time (although I think the issue there is less urgent than for iOS). 
 
 # Contact details
 * email: maarten@thedreamweb.eu
