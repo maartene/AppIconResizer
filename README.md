@@ -14,7 +14,11 @@ This is a little cumbersome. After building, you will have an executable somewhe
 # Usage
 Use: `# appiconresizer <inputfile>`
 Example: 
-  ```# appiconresizer icon.png
+  ```
+  # appiconresizer icon.png
+  Using file icon.png.
+  Setting base image name: icon
+  ...
   # ls -l
   -rw-r--r--@ 1 maartene  staff  1047358 24 sep 19:30 icon.png
   -rw-r--r--@ 1 maartene  staff  1945292 24 sep 19:58 icon.pxm
