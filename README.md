@@ -1,10 +1,12 @@
 # AppIcon Resizer
 A simple CLI tool to convert an input PNG into all the required formats for iOS. Like launch icons, settings icons, spotlight, etc. In all the required formats for iPad, iPad Pro, iPhone, 2x, 3x etc. Should save you some time.
 
+Note: your source file needs to be at least as large as the largest format required. I.e. for iOS, this is currently 1024x1024px.
+
 # How to get it
 ## Binary distribution
 You can grab a binary build here:
-* [appiconresizer.zip](https://www.thedreamweb.eu/files/appiconresizer.zip). (MD5: e9a448fd6068c54f18d0a22124882757)
+* [appiconresizer.zip](https://www.thedreamweb.eu/files/appiconresizer.zip). (MD5: 1b19c10339d07eb08e75eee60f155bfd)
 You should then extract the archive and copy the resulting executable to `/usr/local/bin` or something for easy access. Off course, it also works with a direct path to the executable.
 
 ## Build instructions
@@ -43,7 +45,7 @@ Example:
 * `-h             ` : show help
 
 # Known issues
-* Some files crash the application when you try to resize them with the following message: `Illegal instruction: 4`. This might be the case if the file to convert is not large enough. But this requires further investigation;
+* ~~Some files crash the application when you try to resize them with the following message: `Illegal instruction: 4`. This might be the case if the file to convert is not large enough. But this requires further investigation~~ FIXED;
 * Only iOS build app icon sizes are now available. I'll add tvOS, watchOS and macOS at a later time (although I think the issue there is less urgent than for iOS). 
 
 # Contact details
