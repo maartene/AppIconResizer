@@ -19,6 +19,15 @@ struct Resizer {
                         CGSize(width: 76, height: 76), CGSize(width: 152, height: 152), CGSize(width: 167, height: 167),
                         CGSize(width: 1024, height: 1024)]
     
+    static let MINIMUM_SOURCE_IMAGE_WIDTH = Int(SIZES.reduce(0) { current, size in
+        max(current, Double(size.width))
+    })
+    
+    static let MINIMUM_SOURCE_IMAGE_HEIGHT = Int(SIZES.reduce(0) { current, size in
+        max(current, Double(size.height))
+    })
+    
+    
     static func resizeImage(_ image: CGImage) -> [CGImage] {
         
         

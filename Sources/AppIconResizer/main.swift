@@ -98,6 +98,16 @@ struct ResizerCLI {
         guard let image = CGImage(pngDataProviderSource: dataProvider, decode: nil, shouldInterpolate: false, intent: .defaultIntent) else {
             throw AppIconResizerError.notAnImage("Loaded from file \(inputFile) is not a PNG image.")
         }
+        
+        if image.width < Resizer.MINIMUM_SOURCE_IMAGE_WIDTH {
+            print("The input image should be at least \(Resizer.MINIMUM_SOURCE_IMAGE_WIDTH) pixels wide. Input file is only \(image.width) pixels wide.")
+            return
+        }
+        
+        if image.height < Resizer.MINIMUM_SOURCE_IMAGE_HEIGHT {
+            print("The input image should be at least \(Resizer.MINIMUM_SOURCE_IMAGE_HEIGHT) pixels wide. Input file is only \(image.height) pixels wide.")
+            return
+        }
 
         let scaledImages = Resizer.resizeImage(image)
 
