@@ -132,5 +132,6 @@ struct ResizerCLI {
     }
 }
 
+// the program starts execution here:
 var resizerCLI = ResizerCLI(commandLineArguments: CommandLine.arguments)
 resizerCLI.execute()
