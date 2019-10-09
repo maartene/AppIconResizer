@@ -10,8 +10,18 @@ You can grab a binary build here:
 You should then extract the archive and copy the resulting executable to `/usr/local/bin` or something for easy access. Off course, it also works with a direct path to the executable.
 
 ## Build instructions
-This is a little cumbersome. After building, you will have an executable somewhere in a temporary folder. Or you can create an archive and find it there. Once you find it, you can "install" it by copying it to a location within path. For example:
-`# sudo cp appiconresizer /usr/local/bin/`
+The easiest way to build the application is using Swift Package Manager. From Terminal:
+```
+# cd /path/to/repo
+# swift build
+[4/4] Linking AppIconResizer
+# cd .build/debug
+```
+You can now use the command from this directory using `./AppIconResizer <image>`.
+You probably want to "install" it by copying it to a location within path. I also recommend copying the file as a lower-case only command `appiconresizer`. For example:
+```
+# sudo cp AppIconResizer /usr/local/bin/appiconresizer
+```
 
 # Usage
 Use: `# appiconresizer <inputfile>`
